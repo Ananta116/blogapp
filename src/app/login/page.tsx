@@ -17,14 +17,11 @@ export default function Register() {
   return (
     <div>
       <div className="mt-[100px] flex justify-evenly">
-        <div className="text-white">
-          <h1 className="text-[30px] font-semibold">Post Your Story</h1>
-          <h2 className="font-thin">
-            Post your story let the world knows what you doing!
-          </h2>
+        <div className="text-black mt-[150px]">
+          <h1 className="text-[30px] font-semibold">Keep your gaming experience</h1>
           <Image
-            className="rounded-md"
-            src={"/nextjs.png"}
+            className="rounded-md mt-10"
+            src={"/next.svg"}
             alt="errors"
             width={400}
             height={500}

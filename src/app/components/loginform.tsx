@@ -1,8 +1,10 @@
 "use client";
+import { login } from "@/redux/userSlice";
 // import { login } from "@/redux/userSlice";
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import { Field, Form, Formik, FormikHelpers, FormikProps } from "formik";
 import { useRouter } from "next/navigation";
+import { useDispatch } from "react-redux";
 // import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import * as yup from "yup";
@@ -23,28 +25,24 @@ interface IProps {
 export default function LoginForm({ onReload }: IProps) {
   const initialValues: ILogForm = { login: "", password: "" };
   const router = useRouter();
+  const dispatch = useDispatch()
   //   const dispatch = useDispatch();
   const logUser = async (
     values: ILogForm,
     actions: FormikHelpers<ILogForm>
   ) => {
     try {
-      const res = await axios.post(
-        "https://pilotcake-us.backendless.app/api/users/login",
-        values
-      );
-      if (res.data?.length == 0) throw "Incorrect Email or Password";
+      const {data} = await axios.post("/api/auth/login", values);
+      dispatch(login(data))
       actions.resetForm();
-      console.log(res.data);
       onReload();
       toast.success("Login Successfull!");
       router.push("/");
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
-      console.log(error);
-      toast.error(
-        error.response?.data?.message || "Incorrect Email or Password"
-      );
+      if (error instanceof AxiosError){
+        toast.error(error.response?.data?.error?.message || "Login Failed!")
+      }
     }
   };
   return (
@@ -68,8 +66,8 @@ export default function LoginForm({ onReload }: IProps) {
                   className="ml-5 mt-2 drop-shadow border w-[450px] "
                 />
                 {touched.login && errors.login ? (
-                    <div className="ml-5 text-red-600">{errors.login}</div>
-                ): null}
+                  <div className="ml-5 text-red-600">{errors.login}</div>
+                ) : null}
                 <p className="ml-5 mt-2">Password</p>
                 <Field
                   name="password"

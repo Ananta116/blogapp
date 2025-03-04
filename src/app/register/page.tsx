@@ -3,11 +3,11 @@
 import { useState } from "react";
 
 import RegForm from "../components/regform";
-import { IUser } from "../type";
-import { useRouter } from "next/navigation";
+// import { IUser } from "../type";
+// import { useRouter } from "next/navigation";
 
 export default function Register() {
-  const [users, setUsers] = useState<IUser[]>([]);
+  // const [users, setUsers] = useState<IUser[]>([]);
   const [render, setRender] = useState<boolean>(true);
 
   // const router = useRouter();

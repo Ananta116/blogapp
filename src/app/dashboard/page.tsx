@@ -1,7 +1,9 @@
+import FormBlog from "./_components";
+
 export default function Page(){
     return(
         <div>
-            dashboard
+            <FormBlog/>
         </div>
     )
 }

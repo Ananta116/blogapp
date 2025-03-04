@@ -1,6 +1,10 @@
+"use client"
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+
 
 export default function Home() {
+  const router = useRouter();
   return (
     <div>
       <div className="flex gap-5 justify-center mt-[50px]">
@@ -77,6 +81,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <button 
+      onClick={()=> router.push("/dashboard")}
+      className="w-[100px] h-[50px] bg-amber-700">New Blog</button>
     </div>
   );
 }

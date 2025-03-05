@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import RegForm from "../components/regform";
+import RegForm from "./_components/regform";
 
 // import { IUser } from "../type";
 // import { useRouter } from "next/navigation";

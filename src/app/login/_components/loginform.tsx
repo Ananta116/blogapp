@@ -58,7 +58,7 @@ export default function LoginForm({ onReload }: IProps) {
             <Form>
               <div className="bg-white w-[500px] h-[500px] rounded-md text-black max-sm:w-screen">
                 <h1 className="ml-5 mt-5 text-[25px] font-medium">
-                  Sign In now
+                  Login
                 </h1>
                 <p className="ml-5 mt-2">Name</p>
                 <Field
@@ -79,7 +79,7 @@ export default function LoginForm({ onReload }: IProps) {
                 ) : null}
                 <button
                   type="submit"
-                  className="mt-[50px] ml-5 bg-orange-400 text-black w-[150px] rounded-md drop-shadow"
+                  className="mt-[50px] ml-5 bg-black text-white w-[150px] rounded-md drop-shadow"
                 >
                   {isSubmitting ? "loading" : "Sign in"}
                 </button>

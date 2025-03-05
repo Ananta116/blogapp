@@ -10,7 +10,7 @@ import {
 import { FaWhatsapp } from "react-icons/fa";
 import { IBlog } from "@/app/type";
 
-interface IProps {
+export interface IProps {
   data : IBlog
 }
 export default function Navblog({data}:IProps) {

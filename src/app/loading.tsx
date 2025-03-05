@@ -5,7 +5,7 @@ export default function Loading() {
     const ball = {
         width: 100,
         height: 100,
-        backgroundColor: "#0000FF",
+        backgroundColor: "#FFFFFF",
         borderRadius: "50%",
     }
   return (

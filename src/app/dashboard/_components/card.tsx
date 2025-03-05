@@ -28,12 +28,12 @@ export default function Card({
           fill
           priority
         />
-        <span className=" absolute bg-gray-600 text-white px-2 m-2 right-0 text-xs rounded-sm ">
+        <span className=" absolute bg-black text-white px-2 m-2 right-0 text-xs rounded-sm ">
           {category}
         </span>
       </div>
       <div className="p-4">
-        <h5 className="mb-2 text-md font-bold line-clamp-2 tracking-tight text-black">
+        <h5 className="mb-2 text-md font-semibold tracking-tight text-black line-clamp-1 hover:line-clamp-2">
           {title}
         </h5>
         <div className="flex items-center my-5">
@@ -59,7 +59,7 @@ export default function Card({
         </div>
         <Link
           href={`/blog/${objectId}`}
-          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-teal-700 rounded-lg hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800"
+          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-black rounded-lg hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800"
         >
           Read more
         </Link>

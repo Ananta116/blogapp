@@ -11,7 +11,7 @@ export default async function Home() {
   return (
     <div>
       <Wrapper>
-        <div className="grid w-full p-4 grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-2">
+        <div className="mt-[80px] grid w-full p-4 grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-2">
           {data.map((item, idx) => {
             return (
               <div key={idx}>

@@ -24,3 +24,9 @@ export interface IBlog {
     thumbnail:string;
     author:IAuthor;
 }
+
+export interface UserState {
+  objectId: string | null
+  name: string
+  email:string
+}

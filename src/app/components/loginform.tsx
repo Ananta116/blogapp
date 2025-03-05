@@ -56,14 +56,14 @@ export default function LoginForm({ onReload }: IProps) {
           const { errors, touched, isSubmitting } = props;
           return (
             <Form>
-              <div className="bg-white w-[500px] h-[500px] rounded-md text-black">
+              <div className="bg-white w-[500px] h-[500px] rounded-md text-black max-sm:w-screen">
                 <h1 className="ml-5 mt-5 text-[25px] font-medium">
                   Sign In now
                 </h1>
                 <p className="ml-5 mt-2">Name</p>
                 <Field
                   name="login"
-                  className="ml-5 mt-2 drop-shadow border w-[450px] "
+                  className="ml-5 mt-2 drop-shadow border w-[450px] max-sm:w-[250px] "
                 />
                 {touched.login && errors.login ? (
                   <div className="ml-5 text-red-600">{errors.login}</div>
@@ -71,7 +71,7 @@ export default function LoginForm({ onReload }: IProps) {
                 <p className="ml-5 mt-2">Password</p>
                 <Field
                   name="password"
-                  className="ml-5 mt-2 drop-shadow border w-[450px] "
+                  className="ml-5 mt-2 drop-shadow border w-[450px] max-sm:w-[250px] "
                   type="password"
                 />
                 {touched.password && errors.password ? (
@@ -79,7 +79,7 @@ export default function LoginForm({ onReload }: IProps) {
                 ) : null}
                 <button
                   type="submit"
-                  className="mt-[50px] ml-5 bg-blue-900 text-white w-[150px] rounded-md drop-shadow"
+                  className="mt-[50px] ml-5 bg-orange-400 text-black w-[150px] rounded-md drop-shadow"
                 >
                   {isSubmitting ? "loading" : "Sign in"}
                 </button>

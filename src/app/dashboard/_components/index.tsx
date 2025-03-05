@@ -60,7 +60,7 @@ export default function FormBlog() {
             <div>
               <label
                 htmlFor="title"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-sm font-medium text-white"
               >
                 Title
               </label>
@@ -78,7 +78,7 @@ export default function FormBlog() {
             <div>
               <label
                 htmlFor="category"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-sm font-medium text-white"
               >
                 Category
               </label>
@@ -101,7 +101,7 @@ export default function FormBlog() {
             <div>
               <label
                 htmlFor="thumbnail"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-sm font-medium text-white"
               >
                 Thumbnail
               </label>
@@ -123,7 +123,7 @@ export default function FormBlog() {
               >
                 Content
               </label>
-              <div className="text-black">
+              <div className="text-black bg-amber-50">
                 <RichTextEditor setFieldValue={props.setFieldValue} />
               </div>
               <ErrorMessage

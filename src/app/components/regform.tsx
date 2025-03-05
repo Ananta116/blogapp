@@ -56,14 +56,14 @@ export default function RegForm({ onReload }: IProps) {
           const { errors, touched, isSubmitting } = props;
           return (
             <Form>
-              <div className="bg-white w-[500px] h-[500px] rounded-md text-black drop-shadow-md">
+              <div className="bg-white w-[500px] h-[500px] rounded-md text-black drop-shadow-md max-sm:w-screen">
                 <h1 className="ml-5 mt-5 text-[25px] font-medium">
                   Sign up now
                 </h1>
                 <p className="ml-5 mt-8">Username</p>
                 <Field
                   name="name"
-                  className="ml-5 mt-2 drop-shadow border w-[450px] rounded-md "
+                  className="ml-5 mt-2 drop-shadow border w-[450px] rounded-md max-sm:w-[250px]"
                 />
                 {touched.name && errors.name ? (
                   <div className="ml-5 text-red-600">{errors.name}</div>
@@ -71,7 +71,7 @@ export default function RegForm({ onReload }: IProps) {
                 <p className="ml-5 mt-2">Email</p>
                 <Field
                   name="email"
-                  className="ml-5 mt-2 drop-shadow border w-[450px] rounded-md"
+                  className="ml-5 mt-2 drop-shadow border w-[450px] rounded-md max-sm:w-[250px]"
                 />
                 {touched.email && errors.email ? (
                   <div className="ml-5 text-red-600">{errors.email}</div>
@@ -79,7 +79,7 @@ export default function RegForm({ onReload }: IProps) {
                 <p className="ml-5 mt-2">Password</p>
                 <Field
                   name="password"
-                  className="ml-5 mt-2 drop-shadow border w-[450px] rounded-md"
+                  className="ml-5 mt-2 drop-shadow border w-[450px] rounded-md max-sm:w-[250px]"
                   type="password"
                 />
                 {touched.password && errors.password ? (
@@ -87,7 +87,7 @@ export default function RegForm({ onReload }: IProps) {
                 ) : null}
                 <button
                   type="submit"
-                  className="mt-[50px] ml-5 bg-orange-400 text-black w-[150px] rounded-md drop-shadow"
+                  className="mt-[50px] ml-5 bg-black text-white w-[150px] rounded-md drop-shadow"
                 >
                   {isSubmitting ? "Loading" : "REGISTER"}
                 </button>
